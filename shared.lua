@@ -223,7 +223,15 @@ Color(153, 102, 0, 255),
 they are told.]], 
 {"stunstick"}, 
 "kinghobo",
-1, 1, 0, true, false, {Hobo})
+1, 
+1, 
+0, 
+true, 
+false, 
+{Hobo})
+function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+
+
 
 
 
