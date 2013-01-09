@@ -277,7 +277,7 @@ you are trying to raid.]],
 true, 
 true, 
 {SWAT})
-function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+function(ply) return ply:GetUserGroup() == "donator", "trusted" or ply:IsAdmin() end
 
 
 
