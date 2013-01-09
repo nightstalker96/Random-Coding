@@ -216,6 +216,8 @@ TEAM_HOBO = AddExtraTeam("Hobo", {
 
 //ADD CUSTOM TEAMS UNDER THIS LINE:
 
+//Donator Jobs
+
 TEAM_KINGHOBO = AddExtraTeam("Hobo King", 
 Color(153, 102, 0, 255), 
 "models/player/charple01.mdl", 
@@ -231,7 +233,63 @@ false,
 {Hobo})
 function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
 
+TEAM_SWATLEADER = AddExtraTeam("SWAT Leader",
+Color(53, 255, 255, 255), 
+"models/player/urban.mdl",
+[[The SWAT team Leader. You are the boss of ALL
+SWAT. Make sure that your team stays out of
+trouble and does their job.]], 
+{"arrest_stick","unarrest_stick","stunstick","door_ram","weaponchecker"}, 
+"swatleader", 
+1, 
+125, 
+0, 
+true, 
+true, 
+{SWAT,SWAT Sniper})
+function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
 
+TEAM_SWAT = AddExtraTeam("SWAT", 
+Color(51, 51, 255, 255), 
+"models/player/police.mdl", 
+[[You are SWAT.]], {"arrest_stick","unarrest_stick","stunstick","door_ram","weaponchecker"}, 
+"swat", 
+4, 
+60, 
+0, 
+true, 
+true, 
+false)
+function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+
+TEAM_SWATSNIPER = AddExtraTeam("Swat Sniper", 
+Color(51, 153, 255, 255), 
+"models/player/riot.mdl", 
+[[You are a SWAT Sniper. Your job is to set up a
+position from a distance to an area that you are
+trying to raid. Take out the armed personel whon
+you are trying to raid.]], 
+{"weapon_real_cs_awp","arrest_stick","unarrest_stick","stunstick","door_ram","weaponchecker"}, 
+"swatsniper", 
+2, 
+65, 
+0, 
+true, 
+true, 
+{SWAT})
+function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+
+
+
+//Trusted User Jobs
+
+
+
+//Admin
+
+
+
+//Super Admin
 
 
 
