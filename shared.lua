@@ -218,7 +218,7 @@ TEAM_HOBO = AddExtraTeam("Hobo", {
 
 //Donator Jobs
 
-TEAM_KINGHOBO = AddExtraTeam("Hobo King", 
+TEAM_KINGHOBO = AddExtraTeam("Hobo King", {
 Color(153, 102, 0, 255), 
 "models/player/charple01.mdl", 
 [[You are the King of all the hobos. They MUST do as
@@ -230,10 +230,11 @@ they are told.]],
 0, 
 true, 
 false, 
-{Hobo})
+{Hobo}
 function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+})
 
-TEAM_SWATLEADER = AddExtraTeam("SWAT Leader",
+TEAM_SWATLEADER = AddExtraTeam("SWAT Leader", {
 Color(53, 255, 255, 255), 
 "models/player/urban.mdl",
 [[The SWAT team Leader. You are the boss of ALL
@@ -246,10 +247,11 @@ trouble and does their job.]],
 0, 
 true, 
 true, 
-{SWAT,SWAT Sniper})
+{SWAT,SWAT Sniper}
 function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+})
 
-TEAM_SWAT = AddExtraTeam("SWAT", 
+TEAM_SWAT = AddExtraTeam("SWAT", {
 Color(51, 51, 255, 255), 
 "models/player/police.mdl", 
 [[You are SWAT.]], {"arrest_stick","unarrest_stick","stunstick","door_ram","weaponchecker"}, 
@@ -259,10 +261,11 @@ Color(51, 51, 255, 255),
 0, 
 true, 
 true, 
-false)
+false
 function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end
+})
 
-TEAM_SWATSNIPER = AddExtraTeam("Swat Sniper", 
+TEAM_SWATSNIPER = AddExtraTeam("Swat Sniper", {
 Color(51, 153, 255, 255), 
 "models/player/riot.mdl", 
 [[You are a SWAT Sniper. Your job is to set up a
@@ -276,9 +279,9 @@ you are trying to raid.]],
 0, 
 true, 
 true, 
-{SWAT})
+{SWAT}
 function(ply) return ply:GetUserGroup() == "donator", "trusted" or ply:IsAdmin() end
-
+})
 
 
 //Trusted User Jobs
